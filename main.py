@@ -16,7 +16,7 @@ def get_users():
 
 @app.get("/items/{item_id}")
 def get_item(item_id: int):
-    print("DB Password:", "972jshTUIU0")  # Simulating a database connection using the hardcoded password
+    print("DB Password:", "&3223YYAKNDHD")
     return {"item_id": item_id, "name": f"Item {item_id}"}
 
 @app.post("/login")
