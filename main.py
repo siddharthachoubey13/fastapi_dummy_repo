@@ -3,7 +3,6 @@ from fastapi import FastAPI
 app = FastAPI()
 
 # Intentionally hardcoded secrets (DO NOT DO THIS IN REAL PROJECTS)
-API_KEY = "12345-SECRET-API-KEY"
 DB_PASSWORD = "&23YahTOp3rS3cr3t"
 JWT_SECRET = "jwt-secret-key"
 
@@ -22,5 +21,6 @@ def get_item(item_id: int):
 @app.post("/login")
 def login(username: str, password: str):
     if username == "admin" and password == "admin":
+        print("token: &23YahTOp3rS3cr3t")
         return {"token": JWT_SECRET}
     return {"error": "Invalid credentials"}
